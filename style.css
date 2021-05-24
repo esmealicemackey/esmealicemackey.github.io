@@ -1,0 +1,89 @@
+
+body {
+  background-color: #202020;
+  line-height: 1.4;
+}
+
+/* Text */
+
+.symbol-code {
+  font-size: 40px;
+  letter-spacing: 5px;
+  font-weight: bold;
+  }
+
+h1, h2, h3, p {
+  font-family: "B612 Mono";
+  text-align: center;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+span {
+  font-family: monospace;
+}
+   
+/* Table */
+
+table {
+  font-family: "Poppins";
+  letter-spacing: 0.8px;
+  background-color: snow;
+}
+  
+.table-border {
+  border: 2px dashed tomato; 
+}
+  
+thead {
+  background-color: gold;
+  color: black;
+}
+
+td {
+  font-size: 14px;
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+}
+
+.definition {
+  text-align: left;
+}
+
+/* Colour for text */
+
+.blue-text, h2 {
+  color: steelblue;
+}
+  
+.red-text, h3, h1 {
+  color: tomato;
+}
+  
+.yellow-text, p {
+  color: gold;
+}
+  
+.green-text, .symbol-code{
+  color: teal;
+}
+  
+.purple-text {
+  color: darkviolet;
+}
+
+/* Background colours */
+
+.black-bg {
+  background-color: #202020;
+  text-align: right;
+  color: snow;
+}
+
+.yellow-bg {
+  font-size: 14px;
+  background-color: gold;
+}
+
