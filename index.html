@@ -1,9 +1,147 @@
-<html>
- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=B612+Mono&display=swap&family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <title>CSS selectors and specificity</title>
+</head>
 <body>
-  <h1>ESME</h1>
-  <p>Welcome to my website!</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
+  <header>
+    <p class="symbol-code">&lt;/&gt;</p>
+    <h1>CSS Selectors <br>and Specificity</h1>
+  </header>
+  <main>
+  <article>
+    <h2>CSS Selectors</h2>
+    <p>Define the elements to which a set of CSS rules apply</p>
+    
+    <table class="table-border">
+      <thead>
+        <th>Basic Selectors</th>
+        <th>Syntax</th>
+        <th>Definition</th>
+        <th>Example</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Universal selector</td>
+          <td class="yellow-bg"><span>*</span></td>
+          <td class="definition">Selects all elements. Optionally, it may be 
+            restricted to a specific namespace or to all namespaces</td>
+          <td class="black-bg"><span class="blue-text">
+            * {<br>
+            color: blue;<br>
+            }</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Type selector</td>
+          <td class="yellow-bg"><span>elementname</spam></td>
+          <td class="definition">Selects all elements that have the given node name</td>
+          <td class="black-bg"><span class="red-text">
+            section {<br>
+            color: red;<br>
+            }</span></td>
+        </tr>
+        <tr>
+          <td>Class selector</td>
+          <td class="yellow-bg"><span>.classname</span></td>
+          <td class="definition">Selects all elements that have the given 
+            class attribute</td>
+          <td class="black-bg"><span class="yellow-text">
+            .index {<br>
+            color: yellow;<br>
+            }</span>
+          </td>
+        </tr>
+        <tr>
+          <td>ID selector</td>
+          <td class="yellow-bg"><span>#idname</span></td>
+          <td class="definition">Selects an element based on the value of its id attribute. 
+            There should be only one element with a given ID in a document.</td>
+          <td class="black-bg"><span class="green-text">
+            #large-title {<br>
+            color: green;<br>
+            }</span></td>
+        </tr>
+        <tr>
+          <td>Attribute selector</td>
+          <td class="yellow-bg"><span>[attr]</span></td>
+          <td class="definition">Selects all elements that have the given attribute</td>
+          <td class="black-bg"><span class="purple-text">
+            [href] {<br>
+            color: purple;<br>
+            }</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </article>
+
+  <article>
+    <h2>CSS Specificity</h2>
+    <p>The order by which the browser decides which CSS style will be displayed</p>
+
+    <table class="table-border">
+      <thead>
+        <th>Specificity</th>
+        <th>Definition</th>
+        <th colspan="2">Example</th>
+        <th></th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>IDs</td>
+          <td class="definition">Most specific selector in CSS</td>
+          <td class="black-bg"><span class="blue-text">
+            h1 {color:red;} #headline {color: blue;}</span>
+          </td>
+          <td class="yellow-bg">If the H1 tag had a ID of 'headline' 
+            the text would be blue
+          </td>
+        </tr>
+        <tr>
+          <td>Chaining</td>
+          <td class="definition">You can require an HTML element to have two or more CSS Selectors 
+          at the same time by combining multiple selectors</td>
+          <td class="black-bg"><span class="red-text">h1.special {<br>color: red;<br>}</span></td>
+          <td class="yellow-bg">Selecting a tag and a class called 'special'</td>
+        </tr>
+        <tr>
+          <td>Descendant Combinator</td>
+          <td class="definition">In addition to chaining selectors to select elements, CSS also supports 
+          selecting elements that are nested within other HTML elements. Also known 
+          as 'Descentdants'</td>
+          <td class="black-bg"><span class="yellow-text">
+            &lt;ul class="main-list"&gt;
+            <br>&lt;li&gt;Text&lt;/li&gt;
+            <br>&lt;/ul&gt;</span></td>
+          <td class="yellow-bg">To select the nested <span>&lt;li&gt;</span> element = <span>.main-list li{color: yellow}</span></td>
+        </tr>
+        <tr>
+          <td>Multiple Selectors</td>
+          <td class="definition">To add more than one CSS style to selectors by adding a ','</td>
+          <td class="black-bg"><span class="green-text">h1, .menu {<br>color: green;<br>}</span></td>
+          <td class="yellow-bg">Separate with a comma</td>
+        </tr>
+        <tr>
+          <td>!important Rule</td>
+          <td class="definition">Can be applied to a sepcific declaration, it will override any other style no matter how specific it is</td>
+          <td class="black-bg"><span class="purple-text">
+            p {<br>
+            color: red !important;<br>
+            }</span>
+          </td>
+          <td class="yellow-bg">The <span>&lt;p&gt;</span> element will be purple</td>
+        </tr>
+      </tbody> 
+    </table>
+  </article>
+</main>
+<footer>
+  <p>@esmealicemackey 2021</p>
+</footer>
 </body>
- 
 </html>
